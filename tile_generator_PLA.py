@@ -11,8 +11,8 @@ from skimage import img_as_ubyte
 # input_path = r"Z:\Leica Cell Dive\Antibody optimization\CK7 [EPR1619Y]\Titration\Cntrl Kidney 22 CK7 EPR1619Y 1-300 Titration Texas Red\Scan1\Cntrl Kidney 22 CK7 EPR1619Y 1-300 Titration Texas Red_Scan1.qptiff"
 # output_dir = r"Z:\Computational Team\Safrygina\CellDive\selected_tiles"
 
-input_path = r"Z:\TRIALS IHC-mIF images\PLA\PLA TEST 5 IF 15-08-2025\PLA T5 IF 15-08-2025\Cntrl Lymph Node 3 PD1-PDL1 PLA T5 opal 690\Scan1.qptiff"
-output_dir = r"Z:\Computational Team\Safrygina\PLA\Cntrl_Lymph_Node_3_PD1_PDL1_PLA_T5_opal_690_Scan_1"
+input_path = r""
+output_dir = r""
 
 tile_size = 256
 min_foreground_pixels = 5000  # Reduced threshold since tissue is sparse
@@ -343,4 +343,5 @@ try:
 except Exception as e:
     print(f"\nERROR: {str(e)}")
     import traceback
+
     traceback.print_exc()
