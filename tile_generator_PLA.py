@@ -7,9 +7,7 @@ import cv2
 from skimage.feature import graycomatrix, graycoprops
 from skimage import img_as_ubyte
 
-# Configuration
-# input_path = r"Z:\Leica Cell Dive\Antibody optimization\CK7 [EPR1619Y]\Titration\Cntrl Kidney 22 CK7 EPR1619Y 1-300 Titration Texas Red\Scan1\Cntrl Kidney 22 CK7 EPR1619Y 1-300 Titration Texas Red_Scan1.qptiff"
-# output_dir = r"Z:\Computational Team\Safrygina\CellDive\selected_tiles"
+
 
 input_path = r""
 output_dir = r""
@@ -345,3 +343,4 @@ except Exception as e:
     import traceback
 
     traceback.print_exc()
+
