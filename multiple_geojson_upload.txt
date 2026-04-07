@@ -1,0 +1,27 @@
+def dir = new File("\\\\wsl.localhost\\Ubuntu\\home\\esafrygina\\WSLprojects\\QCS\\HER2 VENTANA QCS01\\HED_tiles\\dab\\brown_geojson_tiles")
+
+println "Loading from: " + dir
+
+dir.eachFile { file ->
+    if (file.name.toLowerCase().endsWith(".geojson")) {
+        println "Importing: " + file.name
+        importObjectsFromFile(file.getAbsolutePath())
+    }
+}
+
+
+detect uncorrect HED_tiles
+def dir = new File("\\\\wsl.localhost\\Ubuntu\\home\\esafrygina\\WSLprojects\\QCS\\HER2 VENTANA QCS01\\HED_tiles\\dab\\brown_geojson_tiles")
+
+println "Scanning directory..."
+
+dir.eachFile { file ->
+    if (file.name.toLowerCase().endsWith(".geojson")) {
+        try {
+            importObjectsFromFile(file.getAbsolutePath())
+            println "OK: " + file.name
+        } catch (Exception e) {
+            println "❌ BAD: " + file.name
+        }
+    }
+}
