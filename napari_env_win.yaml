@@ -1,0 +1,30 @@
+name: napari_clean
+
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.10
+
+  # Qt backend
+  - pyqt
+
+  # Core scientific stack
+  - numpy
+  - scipy
+  - pandas
+
+  # Image IO
+  - imageio
+  - tifffile
+  - pillow
+
+  # OpenGL / rendering
+  - pyopengl
+
+  # Pip
+  - pip
+
+  - pip:
+      - "napari[all]"
